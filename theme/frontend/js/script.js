@@ -6,13 +6,13 @@ $("#btn-buy").click(function(){
 // strat menu fixed
 var num = 80; //number of pixels before modifying styles
 
-$(window).bind('scroll', function() {
-    if ($(window).scrollTop() > num) {
-        $('header').addClass('fixed');
-    } else {
-        $('header').removeClass('fixed');
-    }
-});
+// $(window).bind('scroll', function() {
+//     if ($(window).scrollTop() > num) {
+//         $('header').addClass('fixed');
+//     } else {
+//         $('header').removeClass('fixed');
+//     }
+// });
 // end menu fixed
 
 
@@ -56,37 +56,43 @@ jQuery(function($) {
         $('.top a h2').addClass("text-gd");
     }
 
+    // Start slide camera
+    // if($('body').find(".slide-top").length > 0){
+    //     $('.slide-top').camera({
+    //         // height: 'auto',
+    //         height: '30%',
+    //         // loader: 'pie',
+    //         loader: 'none',
+    //         pagination: false,
+    //         thumbnails: false,
+    //         hover: false,
+    //         opacityOnGrid: false,
+    //     });
+    // };
 
-    if($('body').find(".slide-top").length > 0){
-        $('.slide-top').camera({
-            // height: 'auto',
-            height: '30%',
-            // loader: 'pie',
-            loader: 'none',
-            pagination: false,
-            thumbnails: false,
-            hover: false,
-            opacityOnGrid: false,
-        });
-    };
 
-
-    $('.slide-gallery').owlCarousel({
+    $('.box_slider_partner').owlCarousel({
         loop:false,
         margin:20,
         dots:false,
         autoplay:false,
         autoplayTimeout:10000,
         smartSpeed:1500,
+        navContainerClass: "owl-nav-partner",
         nav:true,
-        navText:['<img src="theme/frontend/images/icon/btn-slide.png">','<img src="theme/frontend/images/icon/btn-slide.png">'],
+        navText:['<i class="fa fa-chevron-left"></i>','<i class="fa fa-chevron-right"></i>'],
         responsive:{
             0:{ items:1,nav:false,dots:true},
             480:{ items:2,nav:false,dots:true},
             768:{ items:3 },
             992:{items:4 },
-            1200:{items:4 },
+            1200:{items:5 },
         },
+        thumbs: false,
+        thumbImage: false,
+        // thumbsPrerendered: false,
+        // thumbContainerClass: 'owl-thumbs',
+        // thumbItemClass: 'owl-thumb-item'
     });
 
 
@@ -127,176 +133,6 @@ jQuery(function($) {
     });
 
 
-    $('#slide-post-home-2').owlCarousel({
-        loop:false,
-        items: 3,
-        nav:true,
-        navText:['<img src="theme/frontend/images/icon/btn_slide_small.png">','<img src="theme/frontend/images/icon/btn_slide_small.png">'],
-        responsive:{
-            0:{ items:1 },
-            480:{ items:2 },
-            768:{ items:3 },
-            992:{items:2, dots:false },
-            1200:{items:3, dots:false }
-        },
-        margin:20,
-        autoplay:true,
-        autoplayTimeout:10000,
-        smartSpeed:1500,
-    });
-
-
-    $('#slide-post-home-3').owlCarousel({
-        loop:false,
-        items: 3,
-        nav:true,
-        navText:['<img src="theme/frontend/images/icon/btn_slide_small.png">','<img src="theme/frontend/images/icon/btn_slide_small.png">'],
-        responsive:{
-            0:{ items:1 },
-            480:{ items:2 },
-            768:{ items:3 },
-            992:{items:2, dots:false },
-            1200:{items:3, dots:false }
-        },
-        margin:20,
-        autoplay:true,
-        autoplayTimeout:10000,
-        smartSpeed:1500,
-    });
-
-
-    $('#slide-post-home-4').owlCarousel({
-        loop:false,
-        items: 3,
-        nav:true,
-        navText:['<img src="theme/frontend/images/icon/btn_slide_small.png">','<img src="theme/frontend/images/icon/btn_slide_small.png">'],
-        responsive:{
-            0:{ items:1 },
-            480:{ items:2 },
-            768:{ items:3 },
-            992:{items:2, dots:false },
-            1200:{items:3, dots:false }
-        },
-        margin:20,
-        autoplay:true,
-        autoplayTimeout:10000,
-        smartSpeed:1500,
-    });
-
-
-    $('#slide-post-home-5').owlCarousel({
-        loop:false,
-        items: 3,
-        nav:true,
-        navText:['<img src="theme/frontend/images/icon/btn_slide_small.png">','<img src="theme/frontend/images/icon/btn_slide_small.png">'],
-        responsive:{
-            0:{ items:1 },
-            480:{ items:2 },
-            768:{ items:3 },
-            992:{items:2, dots:false },
-            1200:{items:3, dots:false }
-        },
-        margin:20,
-        autoplay:true,
-        autoplayTimeout:10000,
-        smartSpeed:1500,
-    });
-
-
-    $('#slide-post-home-6').owlCarousel({
-        loop:false,
-        items: 3,
-        nav:true,
-        navText:['<img src="theme/frontend/images/icon/btn_slide_small.png">','<img src="theme/frontend/images/icon/btn_slide_small.png">'],
-        responsive:{
-            0:{ items:1 },
-            480:{ items:2 },
-            768:{ items:3 },
-            992:{items:2, dots:false },
-            1200:{items:3, dots:false }
-        },
-        margin:20,
-        autoplay:true,
-        autoplayTimeout:10000,
-        smartSpeed:1500,
-    });
-
-
-    $('#slide-post-home-7').owlCarousel({
-        loop:false,
-        items: 3,
-        nav:true,
-        navText:['<img src="theme/frontend/images/icon/btn_slide_small.png">','<img src="theme/frontend/images/icon/btn_slide_small.png">'],
-        responsive:{
-            0:{ items:1 },
-            480:{ items:2 },
-            768:{ items:3 },
-            992:{items:2, dots:false },
-            1200:{items:3, dots:false }
-        },
-        margin:20,
-        autoplay:true,
-        autoplayTimeout:10000,
-        smartSpeed:1500,
-    });
-
-
-    $('#slide-post-home-8').owlCarousel({
-        loop:false,
-        items: 3,
-        nav:true,
-        navText:['<img src="theme/frontend/images/icon/btn_slide_small.png">','<img src="theme/frontend/images/icon/btn_slide_small.png">'],
-        responsive:{
-            0:{ items:1 },
-            480:{ items:2 },
-            768:{ items:3 },
-            992:{items:2, dots:false },
-            1200:{items:3, dots:false }
-        },
-        margin:20,
-        autoplay:true,
-        autoplayTimeout:10000,
-        smartSpeed:1500,
-    });
-
-
-    $('#slide-post-home-9').owlCarousel({
-        loop:false,
-        items: 3,
-        nav:true,
-        navText:['<img src="theme/frontend/images/icon/btn_slide_small.png">','<img src="theme/frontend/images/icon/btn_slide_small.png">'],
-        responsive:{
-            0:{ items:1 },
-            480:{ items:2 },
-            768:{ items:3 },
-            992:{items:2, dots:false },
-            1200:{items:3, dots:false }
-        },
-        margin:20,
-        autoplay:true,
-        autoplayTimeout:10000,
-        smartSpeed:1500,
-    });
-
-
-    $('#slide-post-home-10').owlCarousel({
-        loop:false,
-        items: 3,
-        nav:true,
-        navText:['<img src="theme/frontend/images/icon/btn_slide_small.png">','<img src="theme/frontend/images/icon/btn_slide_small.png">'],
-        responsive:{
-            0:{ items:1 },
-            480:{ items:2 },
-            768:{ items:3 },
-            992:{items:2, dots:false },
-            1200:{items:3, dots:false }
-        },
-        margin:20,
-        autoplay:true,
-        autoplayTimeout:10000,
-        smartSpeed:1500,
-    });
-
 
     $('.slide-col-left-1').owlCarousel({
         loop:true,
@@ -309,47 +145,8 @@ jQuery(function($) {
     });
 
 
-    $('.slide-col-left-2').owlCarousel({
-        loop:true,
-        items: 1,
-        dots:true,
-        nav:false,
-        autoplay:true,
-        autoplayTimeout:10000,
-        smartSpeed:1500,
-    });
-
-
-    $('.slide-col-left-3').owlCarousel({
-        loop:true,
-        items: 1,
-        dots:true,
-        nav:false,
-        autoplay:true,
-        autoplayTimeout:10000,
-        smartSpeed:1500,
-    });
-
 
     $('.slide-doi-ngu').owlCarousel({
-        loop:false,
-        items: 4,
-        margin:20,
-        dots:true,
-        nav:false,
-        autoplay:true,
-        autoplayTimeout:10000,
-        smartSpeed:1500,
-        responsive:{
-            0:{ items:1 },
-            480:{ items:2 },
-            767:{ items:3 },
-            991:{items:4, dots:false },
-            1200:{items:4, dots:false },
-        },
-    });
-
-    $('.slide-chung-nhan').owlCarousel({
         loop:false,
         items: 4,
         margin:20,
